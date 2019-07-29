@@ -14,4 +14,36 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  def filter_users
+    User.all.select do |user|
+      matches_self_created = Match.all.find_by(user: self, liked_user: user)
+      matches_user_created = Match.all.find_by(user: user, liked_user: self, is_denied: true)
+      case user
+      when self
+        # filter out self
+        false
+      when matches_self_created.nil? ? self : matches_self_created.liked_user
+        # filter out users that you have already liked
+        # filter out users that you denied
+        false
+      when matches_user_created.nil? ? self : matches_user_created.user
+        # filter out users that denied you
+        false
+      else
+        true
+      end
+    end
+  end
+
+  def users_ive_liked
+    liked_users.select do |user|
+      match = Match.all.find_by(user: self, liked_user: user, is_denied: true)
+      case user
+      when match.nil? ? self : match.liked_user
+        false
+      else
+        true
+      end
+    end
+  end
 end
