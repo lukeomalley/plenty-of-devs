@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  likee_id: 1
+  is_matched: false
+  is_denied: false
+
+two:
+  user_id: 1
+  likee_id: 1
+  is_matched: false
+  is_denied: false
