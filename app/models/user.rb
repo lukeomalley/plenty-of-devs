@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :likers, foreign_key: :liked_user_id, class_name: 'Match'
   has_many :liker_users, through: :likers, source: :user
 
+  has_many :projects
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

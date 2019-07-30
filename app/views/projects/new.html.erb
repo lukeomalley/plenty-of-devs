@@ -1,0 +1,12 @@
+<h1>Add a new project</h1>
+
+<%= form_for @project do |f| %>
+    <%= f.label "Name" %>
+    <%= f.text_field :name %>
+    <%= f.label  "Description"%>
+    <%= f.text_area :description %>
+    <%= f.hidden_field :user_id, :value => @user.id %>
+    <%= f.collection_check_boxes :skill_ids, Skill.all, :id, :name %>
+    <%= f.submit %>
+
+<% end %>
