@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  has_ruby?: false
+  has_python?: false
+  has_java?: false
+  has_rails?: false
+  has_javascript?: false
+
+two:
+  has_ruby?: false
+  has_python?: false
+  has_java?: false
+  has_rails?: false
+  has_javascript?: false
