@@ -15,9 +15,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def filter_users
+    # This does not filter out matches
     User.all.select do |user|
       matches_self_created = Match.all.find_by(user: self, liked_user: user)
       matches_user_created = Match.all.find_by(user: user, liked_user: self, is_denied: true)
+      self_matches = Match.all.find_by(user: self, liked_user: user, is_matched: true)
+      user_matches = Match.all.find_by(user: user, liked_user: self, is_matched: true)
+
       case user
       when self
         # filter out self
@@ -29,21 +33,25 @@ class User < ApplicationRecord
       when matches_user_created.nil? ? self : matches_user_created.user
         # filter out users that denied you
         false
+      when self_matches.nil? ? self : self_matches.liked_user
+        false
+      when user_matches.nil? ? self : user_matches.user
+        false
       else
         true
       end
     end
   end
 
-  def users_ive_liked
-    liked_users.select do |user|
-      match = Match.all.find_by(user: self, liked_user: user, is_denied: true)
-      case user
-      when match.nil? ? self : match.liked_user
-        false
-      else
-        true
-      end
+  def my_matches
+    (matches + Match.all.where(liked_user: self)).select do |match|
+      match.is_matched == true
+    end
+  end
+
+  def my_matches_users
+    my_matches.map do |match|
+      match.user == self ? match.liked_user : match.user
     end
   end
 end

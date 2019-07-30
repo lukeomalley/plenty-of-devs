@@ -1,9 +1,9 @@
 <p>Current User: <%=current_user.email %></p>
-<p>Liked Users:</p>
+<p>My Matches:</p>
 <%# Show all the users that the current user has liked %>
 <%# Problem with when a user denies someone they still show up %>
 <%# because user.liked_uses doesnt take into account the booleans %>
-<% current_user.users_ive_liked.each do |user| %>
+<% current_user.my_matches_users.each do |user| %>
   <li><%=user.email %></li>
 <% end %>
 <hr>

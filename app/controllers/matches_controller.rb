@@ -7,8 +7,8 @@ class MatchesController < ApplicationController
   def liked
     @liked_user = User.find(params[:liked_user])
     @user = current_user
-    if Match.all.find_by(liked_user_id: @user.id)
-      match = Match.all.find_by(liked_user_id: @user.id)
+    if Match.all.find_by(user: @liked_user, liked_user: @user)
+      match = Match.all.find_by(user: @liked_user, liked_user: @user)
       match.update(is_matched: true)
     else
       Match.create(user_id: @user.id, liked_user_id: @liked_user.id)
@@ -19,9 +19,9 @@ class MatchesController < ApplicationController
   def disliked
     @disliked_user = User.find(params[:disliked_user])
     @user = current_user
-    if Match.all.find_by(liked_user_id: @user.id)
-      match = Match.all.find_by(liked_user_id: @user.id)
-      match.update(is_matched: false, is_denied: true)
+    if Match.all.find_by(user: @disliked_user, liked_user: @user)
+      match = Match.all.find_by(user: @disliked_user, liked_user: @user)
+      match.update(is_denied: true)
     else
       Match.create(user_id: @user.id, liked_user_id: @disliked_user.id, is_denied: true)
     end
