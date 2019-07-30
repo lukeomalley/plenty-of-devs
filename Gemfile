@@ -7,6 +7,9 @@ ruby '2.6.1'
 
 gem 'pry'
 
+# Cloudinary gem for pictures
+gem 'cloudinary'
+
 # Faker for generating seed data
 gem 'faker'
 

@@ -1,3 +1,9 @@
 <h1><%=@user.first_name %></h1>
 <p><%=@user.occupation  %></p>
 <p><%=@user.city  %></p>
+
+<%= image_tag @user.avatar %>
+<%= form_tag photo_upload_path, method: :put, multipart: true do %>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag %>
+<% end %>

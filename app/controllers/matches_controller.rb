@@ -3,7 +3,7 @@
 class MatchesController < ApplicationController
   before_action :authenticate_user!
   def index
-    @users = current_user.filter_users
+    @users = current_user.filter_users.shuffle
   end
 
   def liked

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  has_one_attached :avatar
   has_many :matches
   # all the users that I have liked
   has_many :liked_users, through: :matches

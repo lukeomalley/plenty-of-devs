@@ -8,6 +8,9 @@
   <p>
     <%=user.occupation %>
   </p>
+  <div class="user-image">
+      <%= image_tag user.avatar %>
+  </div>
   <div class="buttons">
     <%= link_to "✅", like_user_path(user), method: :post %>
     <%= link_to "❌", dislike_user_path(user), method: :post %>

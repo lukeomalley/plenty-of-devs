@@ -14,4 +14,7 @@ Rails.application.routes.draw do
 
   # user matches page
   get '/matches', to: 'users#matches', as: 'matches'
+
+  # handle photo upload
+  put 'photo-upload', to: 'users#photo_upload', as: 'photo_upload'
 end
