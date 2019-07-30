@@ -1,4 +1,4 @@
-<p>Current User: <%=current_user.email %></p>
+<p>Current User: <%= link_to current_user.email, user_path(current_user) %></p>
 <p>My Matches:</p>
 <%# Show all the users that the current user has liked %>
 <%# Problem with when a user denies someone they still show up %>

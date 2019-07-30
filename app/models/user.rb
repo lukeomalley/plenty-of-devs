@@ -15,6 +15,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def filter_users
+    # responsible for filtering out the users that we no longer want to show for
+    # the current logged in user
     User.all.select do |user|
       matches_self_created = Match.all.find_by(user: self, liked_user: user)
       matches_user_created = Match.all.find_by(user: user, liked_user: self, is_denied: true)
@@ -43,12 +45,15 @@ class User < ApplicationRecord
   end
 
   def my_matches
+    # This function returns all the matches where the user is involved
+    # both matches that the user created and matches where this user was liked or denied
     (matches + Match.all.where(liked_user: self)).select do |match|
       match.is_matched == true
     end
   end
 
   def my_matches_users
+    # maps over array of all matches and returns the users
     my_matches.map do |match|
       match.user == self ? match.liked_user : match.user
     end

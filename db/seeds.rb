@@ -7,6 +7,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+
+User.create(
+  email: 'luke@luke.com',
+  password: 'testing',
+  password_confirmation: 'testing',
+  username: 'lukeomalley',
+  first_name: 'Luke',
+  last_name: 'OMalley',
+  city: 'Washington D.C.',
+  occupation: 'Software Engineer'
+)
 
 100.times do
   User.create(
@@ -19,4 +31,9 @@
     city: Faker::Address.city,
     occupation: Faker::Job.title
   )
+end
+
+User.all.each do |user|
+  luke = User.find_by(email: 'luke@luke.com')
+  Match.create(user: user, liked_user: luke)
 end
