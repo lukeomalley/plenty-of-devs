@@ -1,0 +1,7 @@
+<h1>Your Matches</h1>
+<p>You have <%=@user.my_matches.size %> matches! Damn you're popular 🔥🔥🔥</p>
+<div class="match-grid">
+  <% @user.my_matches_users.each do |user| %>
+    <%= render partial: "match_card", locals: {user: user} %>
+  <% end %>
+</div>

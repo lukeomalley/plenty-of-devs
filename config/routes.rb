@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   # routes for liking and disliking a user
   post '/like-user/:liked_user', to: 'matches#liked', as: 'like_user'
   post '/dislike-user/:disliked_user', to: 'matches#disliked', as: 'dislike_user'
+
+  # user matches page
+  get '/matches', to: 'users#matches', as: 'matches'
 end

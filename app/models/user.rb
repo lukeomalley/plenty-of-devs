@@ -17,8 +17,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def filter_users
-    # responsible for filtering out the users that we no longer want to show for
-    # the current logged in user
+    # returns a filtered list of users that no longer need to show for
+    # the current logged in user on the match page
     User.all.select do |user|
       matches_self_created = Match.all.find_by(user: self, liked_user: user)
       matches_user_created = Match.all.find_by(user: user, liked_user: self, is_denied: true)
