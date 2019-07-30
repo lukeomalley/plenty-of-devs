@@ -1,0 +1,15 @@
+<div class="user-card">
+  <h3>
+    <%=user.first_name %>
+  </h3>
+  <p>
+    <%=user.city %>
+  </p>
+  <p>
+    <%=user.occupation %>
+  </p>
+  <div class="buttons">
+    <%= link_to "✅", like_user_path(user), method: :post %>
+    <%= link_to "❌", dislike_user_path(user), method: :post %>
+  </div>
+</div>

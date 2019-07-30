@@ -7,6 +7,9 @@ ruby '2.6.1'
 
 gem 'pry'
 
+# Faker for generating seed data
+gem 'faker'
+
 # Devise for handling user login
 gem 'devise'
 

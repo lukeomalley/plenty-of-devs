@@ -15,7 +15,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def filter_users
-    # This does not filter out matches
     User.all.select do |user|
       matches_self_created = Match.all.find_by(user: self, liked_user: user)
       matches_user_created = Match.all.find_by(user: user, liked_user: self, is_denied: true)
