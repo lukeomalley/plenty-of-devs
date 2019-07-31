@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_30_202852) do
+ActiveRecord::Schema.define(version: 2019_07_31_181059) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 2019_07_30_202852) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "chats", force: :cascade do |t|
+    t.integer "match_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "matches", force: :cascade do |t|
     t.integer "user_id"
     t.integer "liked_user_id"
@@ -43,6 +49,14 @@ ActiveRecord::Schema.define(version: 2019_07_30_202852) do
     t.index ["liked_user_id"], name: "index_matches_on_liked_user_id"
     t.index ["user_id", "liked_user_id"], name: "index_matches_on_user_id_and_liked_user_id", unique: true
     t.index ["user_id"], name: "index_matches_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer "chat_id"
+    t.integer "user_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "project_skills", force: :cascade do |t|
