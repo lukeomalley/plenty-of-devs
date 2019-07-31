@@ -1,4 +1,6 @@
 <div class="match-card">
+  <%= image_tag user.avatar %>
   <h3><%=user.first_name %></h3>
   <p><%=user.city %></p>
+  <%= link_to "✉️", new_chat_path(match), method: :post %>
 </div>

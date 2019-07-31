@@ -17,4 +17,12 @@ Rails.application.routes.draw do
 
   # handle photo upload
   put 'photo-upload', to: 'users#photo_upload', as: 'photo_upload'
+
+  # route for showing chats
+  get '/chats/:id', to: 'chats#show', as: 'chat'
+
+  # creating a new chat
+  post '/chats/:match_id', to: 'chats#create', as: 'new_chat'
+
+  resources :messages
 end

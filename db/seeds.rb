@@ -24,6 +24,19 @@ luke = User.create(
 downloaded_image = open("https://thispersondoesnotexist.com/image")
 luke.avatar.attach(io: downloaded_image, filename: "image.jpg")
 
+lisa = User.create(
+  email: 'lisa@lisa.com',
+  password: 'testing',
+  password_confirmation: 'testing',
+  username: 'lisaantwi',
+  first_name: 'Lisa',
+  last_name: 'Antwi',
+  city: 'Washington D.C.',
+  occupation: 'Software Engineer'
+)
+downloaded_image = open("https://thispersondoesnotexist.com/image")
+lisa.avatar.attach(io: downloaded_image, filename: "image.jpg")
+
 25.times do
   user = User.create(
     email: Faker::Internet.email,

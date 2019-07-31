@@ -1,9 +1,24 @@
-<h1><%=@user.first_name %></h1>
-<p><%=@user.occupation  %></p>
-<p><%=@user.city  %></p>
+<div class="span3 well">
+  <center>
+    <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
+      <%= image_tag @user.avatar, :class => "img-circle", :height => "140", :width => "140" %>
+    </a>
+    <h3><%=@user.first_name %></h3>
+    <p><%=@user.city %></p>
+    <p><%=@user.occupation %></p>
+  </center>
+</div>
 
-<%= image_tag @user.avatar %>
+
+<% if @user.projects %>
+  <div>
+    <% @user.projects.each do |project| %>
+      <%= render partial: "project_card", locals: {project: project} %>
+  </div>
+<% end %>
+
 <%= form_tag photo_upload_path, method: :put, multipart: true do %>
   <%= file_field_tag :avatar %>
   <%= submit_tag %>
 <% end %>
+
