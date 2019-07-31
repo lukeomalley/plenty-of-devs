@@ -65,4 +65,5 @@ class User < ApplicationRecord
   def find_match(user)
     Match.find_by(user: self, liked_user: user).nil? ? Match.find_by(user: user, liked_user: self) : Match.find_by(user: self, liked_user: user)
   end
+  
 end

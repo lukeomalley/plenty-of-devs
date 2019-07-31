@@ -1,5 +1,5 @@
 <div class="user-card">
-  <%= image_tag user.avatar %>
+  <%= render partial: 'users/user_pic', locals: {user: user}  %>
   <div class="content">
     <h2><%=user.first_name %></h2>
     <p><%=user.city %></p>
