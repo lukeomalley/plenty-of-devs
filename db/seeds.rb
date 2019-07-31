@@ -10,6 +10,8 @@
 require 'open-uri'
 
 User.destroy_all
+Match.destroy_all
+Skill.destroy_all
 
 luke = User.create(
   email: 'luke@luke.com',
