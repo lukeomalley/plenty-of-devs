@@ -13,9 +13,29 @@
  *= require_tree .
  *= require_self
  */
+ @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
+
+ a {
+   text-decoration: none;
+   color: black;
+ }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
+}
 
 img{
-  width: 50%;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
  .match-card {
    display: grid;
@@ -23,6 +43,7 @@ img{
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
    transition: 0.3s;
    padding: 20px;
+   border-radius: 20px;
  }
 
  .match-card:hover {
@@ -32,7 +53,7 @@ img{
  .match-grid {
    display: grid;
    grid-template-columns: 1fr;
-   grid-gap: 20px;
+   grid-gap: 10px;
  }
 
  .app-wrapper {
@@ -49,9 +70,9 @@ img{
  .user-card {
    display: grid;
    grid-template-rows: repeat(5, auto);
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
    transition: 0.3s;
-   padding: 20px;
+   border-radius: 10px;
  }
 
  .buttons {
@@ -61,4 +82,7 @@ img{
 /* On mouse-over, add a deeper shadow */
 .user-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+.content {
+  padding: 20px
 }

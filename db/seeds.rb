@@ -21,10 +21,10 @@ luke = User.create(
   city: 'Washington D.C.',
   occupation: 'Software Engineer'
 )
-downloaded_image = open("https://source.unsplash.com/400x400/?face")
+downloaded_image = open("https://thispersondoesnotexist.com/image")
 luke.avatar.attach(io: downloaded_image, filename: "image.jpg")
 
-3.times do
+25.times do
   user = User.create(
     email: Faker::Internet.email,
     password: 'testing',
@@ -35,7 +35,7 @@ luke.avatar.attach(io: downloaded_image, filename: "image.jpg")
     city: Faker::Address.city,
     occupation: Faker::Job.title
   )
-  downloaded_image = open("https://source.unsplash.com/400x400/?face")
+  downloaded_image = open("https://thispersondoesnotexist.com/image")
   user.avatar.attach(io: downloaded_image, filename: "image.jpg")
 end
 
@@ -43,3 +43,10 @@ User.all.each do |user|
   luke = User.find_by(email: 'luke@luke.com')
   Match.create(user: user, liked_user: luke)
 end
+
+Skill.create(name: 'ruby')
+Skill.create(name: 'python')
+Skill.create(name: 'javascript')
+Skill.create(name: 'rails')
+Skill.create(name:'html')
+Skill.create(name: 'css')

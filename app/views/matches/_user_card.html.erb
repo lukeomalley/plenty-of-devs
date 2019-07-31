@@ -1,18 +1,22 @@
 <div class="user-card">
-  <h3>
-    <%=user.first_name %>
-  </h3>
-  <p>
-    <%=user.city %>
-  </p>
-  <p>
-    <%=user.occupation %>
-  </p>
   <div class="user-image">
       <%= image_tag user.avatar %>
   </div>
-  <div class="buttons">
-    <%= link_to "✅", like_user_path(user), method: :post %>
-    <%= link_to "❌", dislike_user_path(user), method: :post %>
+  <div class="content">
+    <h2><%=user.first_name %></h2>
+    <p><%=user.city %></p>
+    <p><%=user.occupation %></p>
+    <div class="buttons">
+      <%= link_to "✅", like_user_path(user), method: :post %>
+      <%= link_to "❌", dislike_user_path(user), method: :post %>
+    </div>
   </div>
 </div>
+
+<%# <div class="card">
+  <img src="img_avatar.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>John Doe</b></h4>
+    <p>Architect & Engineer</p>
+  </div>
+</div> %>
