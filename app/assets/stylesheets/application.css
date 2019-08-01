@@ -326,11 +326,13 @@ body {
 
 /* User sign in and sign forms. */
 .border-form-div {
-  max-width: 300px;
+  width: 600px;
   padding: 19px 29px 29px;
   margin: 20px auto 20px;
   background-color: #fff;
-  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+  border-radius: 10px;
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
@@ -351,6 +353,17 @@ body {
   padding: 7px 9px;
 }
 
+.form-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.text-input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid grey;
+}
 
 /* ========================================== */
 /* form styles */

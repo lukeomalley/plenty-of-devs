@@ -1,12 +1,10 @@
-
 <% if current_user.nil? %>
-
   <% else %>
     <nav class="nav">
-      <a href="/" class="nav-item is-active" active-color="orange">Home</a>
+      <a href="/" class="nav-item is-active" active-color="orange">Devs</a>
       <a href="/matches" class="nav-item is-active" active-color="orange">My Matches</a>
       <a href="/my-projects" class="nav-item is-active" active-color="orange">My Projects</a>
-      <a href="<%=user_path(1)%>" class="nav-item" active-color="rebeccapurple">Profile</a>
+      <a href="<%=user_path(1)%>" class="nav-item" active-color="rebeccapurple">My Profile</a>
       <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-item"%>
     </nav>
 <% end %>
