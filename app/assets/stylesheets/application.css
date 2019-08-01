@@ -253,49 +253,6 @@ body {
   .nav { overflow: auto; }
 }
 
-
-
-<<<<<<< HEAD
-/* ========================================== */
-/* form styles */
-/* ========================================== */
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ========================================== */
 /* navbar */
 /* ========================================== */
@@ -309,7 +266,7 @@ body {
   height: 100vh;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding: 0 20px;
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/debut_light.png");
 }
@@ -400,172 +357,9 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> project-form
+/* ========================================== */
+/* form styles */
+/* ========================================== */
 
 .checkbox-list  input[type="checkbox"] {
   display: inline-block;
@@ -579,7 +373,6 @@ body {
   display: inline;
   vertical-align: -5px;
  }
-<<<<<<< HEAD
 
 /* ========================================== */
 /* project styles */
@@ -593,5 +386,3 @@ body {
   display: grid;
 }
 
-=======
->>>>>>> project-form
