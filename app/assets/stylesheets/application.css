@@ -222,6 +222,7 @@ a:active, a:focus {
 
 
 
+<<<<<<< HEAD
 /* ========================================== */
 /* navbar */
 /* ========================================== */
@@ -297,3 +298,184 @@ body {
   .nav { overflow: auto; }
 }
 
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkbox-list  input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: -1px;
+  margin: 5px;
+ }
+.checkbox-list input {
+  display: inline;
+ }
+.checkbox-list .collection_check_boxes{
+  display: inline;
+  vertical-align: -5px;
+ }
+>>>>>>> project-form
