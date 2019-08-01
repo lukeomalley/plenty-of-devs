@@ -17,7 +17,7 @@
 
   <div class="app-wrapper">
     <h1><%= link_to "Plenty of Devs", root_path %></h1>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <%= render '/layouts/nav' %>
     <%= yield %>
   </div>
   </body>
