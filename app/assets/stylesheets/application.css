@@ -49,16 +49,11 @@ a:active, a:focus {
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
    transition: 0.3s;
    padding: 20px;
-<<<<<<< HEAD
    border-radius: 10px;
    background-color: #fff;
    width: 60vw;
    align-items: center;
    text-align: center;
-=======
-   border-radius: 20px;
-   background-color: #fff;
->>>>>>> project-form
  }
  
  .match-card img {
@@ -379,10 +374,23 @@ body {
 /* ========================================== */
 
 .project-grid {
-  display: hti
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
+  grid-gap: 20px;
+  padding-top: 20px;
 }
 
 .project-card {
   display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.project-card-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr) );
 }
 

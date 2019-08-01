@@ -2,6 +2,8 @@
 
 Rails.application.routes.draw do
   resources :projects, only: [:new, :create, :show, :index]
+
+  get '/my-projects', to: 'projects#my_projects', as: 'my_projects'
   resources :skills, only: [:new, :create, :show]
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

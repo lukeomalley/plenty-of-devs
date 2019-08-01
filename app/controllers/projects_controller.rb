@@ -19,6 +19,9 @@ class ProjectsController < ApplicationController
         redirect_to project_path(@project)
     end
 
+    def my_projects
+    end
+
     private
     def project_params
         params.require(:project).permit(:user_id, :name, :description, skill_ids:[])

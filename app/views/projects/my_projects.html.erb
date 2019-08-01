@@ -1,0 +1,9 @@
+<div class="project-grid">
+  <% current_user.projects.each do |project| %>
+    <%= render partial: 'project_card', locals: {project: project} %>
+  <% end %>
+</div>
+
+<hr>
+
+ <%= link_to "Add a new project", new_project_path %>

@@ -9,15 +9,12 @@
 
 
 <% if @user.projects %>
-  <div>
+  <div class="project-grid">
     <% @user.projects.each do |project| %>
       <%= render partial: "projects/project_card", locals: {project: project} %>
     <% end %>
   </div>
 <% end %>
-
-
- <%= link_to "Add a new project", new_project_path %>
 
 
 
