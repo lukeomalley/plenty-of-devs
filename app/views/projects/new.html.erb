@@ -1,38 +1,35 @@
-
-
-<div class="container">
-    <div class="col-md-6 mx-auto text-center">
-        <div class="header-title">
-            <h1 class="wv-heading--title">
-            Create a new project
-            </h1>
-            <h6 class="wv-heading--subtitle">
-                Add a new project to your profile to start matching with potential collaborators
-            </h6>
-
+<div class="container ">
+    <div class="col-md-4 mx-auto text-center">
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 mx-auto">
-        <div class="myform form">
-            <%= form_for @project do |f| %>
-            <div class='form-group'>
-                 <%= f.text_field :name, class: "form-control my-input", placeholder: 'Project Name' %>
+            <div class="row">
+                <div class="header-title">
+                    <h1 class="wv-heading--title">
+                    Create a new project
+                    </h1>
+                    <h6 class="wv-heading--subtitle">
+                        Add a new project to your profile to start matching with potential collaborators
+                    </h6>
+                </div>
             </div>
-             <div class='form-group'>
-                 <%= f.text_area :description, class: "form-control my-input", placeholder: 'Tell us more about your your project'%>
+            <div class="myform form">
+                <%= form_for @project do |f| %>
+                <div class='form-group'>
+                    <%= f.text_field :name, class: "form-control my-input", placeholder: 'Project Name' %>
+                </div>
+                <div class='form-group'>
+                    <%= f.text_area :description, class: "form-control my-input", placeholder: 'Tell us more about your your project'%>
+                </div>
+                <div class='form-group'>
+                    <%= f.hidden_field :user_id, :value => @user.id %>
+                </div>
+                <div class='form-group checkbox-list'>
+                    <%= f.collection_check_boxes :skill_ids, Skill.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %>
+                </div>
+                <div class='form-group'>
+                        <%= f.submit %>
+                </div>
+                <% end %>
             </div>
-             <div class='form-group'>
-                 <%= f.hidden_field :user_id, :value => @user.id %>
-            </div>
-             <div class='form-group checkbox-list'>
-                   <%= f.collection_check_boxes :skill_ids, Skill.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} %>
-            </div>
-             <div class='form-group'>
-                    <%= f.submit %>
-            </div>
-            <% end %>
-        </div>
         </div>
     </div>
 </div>
