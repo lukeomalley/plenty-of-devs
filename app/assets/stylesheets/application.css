@@ -49,11 +49,16 @@ a:active, a:focus {
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
    transition: 0.3s;
    padding: 20px;
+<<<<<<< HEAD
    border-radius: 10px;
    background-color: #fff;
    width: 60vw;
    align-items: center;
    text-align: center;
+=======
+   border-radius: 20px;
+   background-color: #fff;
+>>>>>>> project-form
  }
  
  .match-card img {
@@ -250,9 +255,317 @@ body {
 
 
 
+<<<<<<< HEAD
 /* ========================================== */
 /* form styles */
 /* ========================================== */
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================== */
+/* navbar */
+/* ========================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/debut_light.png");
+}
+
+.nav {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+  border-radius: 40px;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+  margin-top: 20px;
+}
+
+.nav img {
+  max-width: 25px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.nav-item {
+  color: #83818c;
+  padding: 20px;
+  text-decoration: none;
+  transition: .3s;
+  margin: 0 6px;
+  z-index: 1;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-item:not(.is-active):hover:before {
+  opacity: 1;
+  bottom: 0;
+}
+
+
+.nav-item:not(.is-active):hover { color: #333; }
+
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  transition: .4s;
+  height: 5px;
+  z-index: 1;
+  border-radius: 8px 8px 0 0;
+}
+
+.nav-bar-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+
+@media (max-width: 580px) {
+  .nav { overflow: auto; }
+}
+
+/* User sign in and sign forms. */
+.border-form-div {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> project-form
 
 .checkbox-list  input[type="checkbox"] {
   display: inline-block;
@@ -266,6 +579,7 @@ body {
   display: inline;
   vertical-align: -5px;
  }
+<<<<<<< HEAD
 
 /* ========================================== */
 /* project styles */
@@ -279,3 +593,5 @@ body {
   display: grid;
 }
 
+=======
+>>>>>>> project-form
