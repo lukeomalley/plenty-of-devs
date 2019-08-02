@@ -15,4 +15,6 @@
   <% end %>
 </div>
 
-<%= render partial: 'add_collaborator', locals: {project: @project} %>
+<% if @project.user == current_user %>
+  <%= render partial: 'add_collaborator', locals: {project: @project} %>
+<% end %>
