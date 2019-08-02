@@ -1,10 +1,11 @@
 <div>
-  <div class= "profile-page-img">
+    <div class= "profile-page-img">
       <%= render partial: 'users/user_pic', locals: {user: @user}  %>
     </div>
     <h3><%=@user.first_name %></h3>
     <p><%=@user.city %></p>
     <p><%=@user.occupation %></p>
+    <p><%= link_to "Edit Profile", edit_user_registration_path %></p>
 </div>
 
 
