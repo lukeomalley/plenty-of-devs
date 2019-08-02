@@ -11,10 +11,14 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7f4efc6c8a.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+</head>
   <body>
 
   <div class="app-wrapper">
-    <h1><%= link_to "Plenty of Devs", root_path %></h1>
+    <h1 class="title"><%= link_to "PlentyOfDevs", root_path %></h1></b>
     <%= render '/layouts/nav' %>
     <%= yield %>
   </div>

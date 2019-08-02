@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+*= require font-awesome
  */
  @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
 
@@ -31,7 +32,7 @@ h4,
 h5,
 h6,
 p {
-  font-family: "Lato", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
@@ -220,7 +221,7 @@ body {
   transition: .3s;
   margin: 0 6px;
   z-index: 1;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   position: relative;
 }
@@ -295,7 +296,7 @@ body {
   transition: .3s;
   margin: 0 6px;
   z-index: 1;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   position: relative;
 }
@@ -413,6 +414,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr) );
 }
 
+<<<<<<< HEAD
 /* ========================================== */
 /* project show page */
 /* ========================================== */
@@ -441,4 +443,17 @@ body {
   background: #c4e9ff;
   border-radius: 10px;
 
+=======
+.checkmark {
+  color: green;
+}
+
+.cross {
+  color: red;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 'bold';
+>>>>>>> font-icons
 }

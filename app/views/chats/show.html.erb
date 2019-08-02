@@ -3,8 +3,10 @@
 <% end %>
 
 <%= form_for @message do |f| %>
-  <%= f.hidden_field :chat_id, value: @chat.id %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.text_area :content %>
-  <%= f.submit %>
+  <div class='form-group'>
+      <%= f.hidden_field :chat_id, value: @chat.id %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.text_area :content , class: 'form-control'%>
+      <%= f.submit 'Send Message', :class => 'btn btn-default' %>
+  </div>
 <% end %>
