@@ -1,5 +1,9 @@
-<% @chat.messages.each do |message| %>
-  <%= render partial: "message", locals: {message: message} %>
+<% if !@chat.messages.empty? %>
+  <% @chat.messages.each do |message| %>
+    <%= render partial: "message", locals: {message: message} %>
+  <% end %>
+  <% else %>
+  <p class='chat-message'> Crickets... 🦗🦗 </p>
 <% end %>
 
 <%= form_for @message do |f| %>

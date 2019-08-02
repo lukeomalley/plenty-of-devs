@@ -26,5 +26,8 @@ Rails.application.routes.draw do
   # creating a new chat
   post '/chats/:match_id', to: 'chats#create', as: 'new_chat'
 
+  # adding a collaborator to a project
+  post '/add-collaborator', to: 'projects#add_collaborator', as: 'add_collaborator'
+
   resources :messages
 end

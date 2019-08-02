@@ -22,6 +22,11 @@ class ProjectsController < ApplicationController
     def my_projects
     end
 
+    def add_collaborator
+        Collaborator.find_or_create_by(project_id: params[:project_id], user_id: params[:user][:id])
+        redirect_to project_path(params[:project_id])
+    end
+
     private
     def project_params
         params.require(:project).permit(:user_id, :name, :description, skill_ids:[])

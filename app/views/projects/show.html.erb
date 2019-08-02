@@ -6,4 +6,13 @@
       <div class=skill-card><%= skill.name %></div>  
     <% end %>
   </div>
+  <% if !@project.collaborators.empty? %>
+    <div class="collaborators">
+      <% @project.collaborators.each do |collaborator| %>
+        <p><%= collaborator.user.first_name %></p>
+      <% end %>
+    </div>
+  <% end %>
 </div>
+
+<%= render partial: 'add_collaborator', locals: {project: @project} %>

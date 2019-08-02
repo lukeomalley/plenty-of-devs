@@ -1,0 +1,5 @@
+<%= form_tag '/add-collaborator', method: :post do %>
+  <%= hidden_field_tag :project_id, project.id %>
+  <%= collection_select :user, :id, current_user.my_matches_users, :id, :first_name %>
+  <button type="submit">Add Collaborator</button>
+<% end %>
