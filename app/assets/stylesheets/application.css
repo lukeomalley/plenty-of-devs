@@ -41,11 +41,7 @@ a:active, a:focus {
 
  .match-card {
    display: grid;
-<<<<<<< HEAD
-   grid-template-columns: 1fr 1fr 1fr 1fr ;
-=======
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
->>>>>>> projects-controller
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
    transition: 0.3s;
    padding: 20px;
@@ -80,7 +76,8 @@ a:active, a:focus {
  .cards-grid {
    display: grid;
    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-   grid-gap: 20px
+   grid-gap: 20px;
+   margin-top: 20px;
  }
 
  .user-card {
@@ -407,6 +404,7 @@ body {
 }
 
 .project-card {
+  font-family: 'Montserrat', sans-serif;
   display: grid;
   grid-template-columns: 1fr;
   padding: 20px;
@@ -419,6 +417,11 @@ body {
 .project-card-skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr) );
+}
+
+.project-actions {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 /* ========================================== */
@@ -463,7 +466,6 @@ body {
   font-weight: 'bold';
 }
 
-<<<<<<< HEAD
 .footer {
   padding: 20px;
 }
@@ -472,5 +474,3 @@ body {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-=======
->>>>>>> projects-controller

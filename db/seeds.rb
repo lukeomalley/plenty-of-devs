@@ -69,6 +69,7 @@ User.all.each do |user|
       ProjectSkill.create(project: project, skill: skill)
     end
   end
+  user.projects.first.update(is_featured: true)
 end
 
 Skill.create(name: 'Ruby')
