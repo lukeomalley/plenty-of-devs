@@ -20,6 +20,10 @@
    color: black;
  }
 
+ hr {
+  border: 1px solid black;
+ }
+
 h1,
 h2,
 h3,
@@ -416,7 +420,7 @@ body {
 .project-show-wrapper {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   width: 60vw;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
   transition: 0.3s;
@@ -426,9 +430,15 @@ body {
 }
 
 .skill-card-grid {
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-gap: 40px;
 }
 
 .skill-card {
-  
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+  background: #c4e9ff;
+  border-radius: 10px;
+
 }
