@@ -414,7 +414,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr) );
 }
 
-<<<<<<< HEAD
 /* ========================================== */
 /* project show page */
 /* ========================================== */
@@ -441,9 +440,9 @@ body {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
   transition: 0.3s;
   background: #c4e9ff;
-  border-radius: 10px;
+  border-radius: 10px
+}
 
-=======
 .checkmark {
   color: green;
 }
@@ -455,5 +454,4 @@ body {
 .title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 'bold';
->>>>>>> font-icons
 }
