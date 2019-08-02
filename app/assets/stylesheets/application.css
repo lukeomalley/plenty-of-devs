@@ -226,7 +226,6 @@ body {
   bottom: 0;
 }
 
-
 .nav-item:not(.is-active):hover { color: #333; }
 
 .nav-indicator {
@@ -410,3 +409,26 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr) );
 }
 
+/* ========================================== */
+/* project show page */
+/* ========================================== */
+
+.project-show-wrapper {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 60vw;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.skill-card-grid {
+
+}
+
+.skill-card {
+  
+}
