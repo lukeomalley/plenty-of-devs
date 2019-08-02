@@ -59,20 +59,24 @@ User.all.each do |user|
   luke = User.find_by(email: 'luke@luke.com')
   Match.create(user: user, liked_user: luke)
   5.times do
-    Project.create(
+    project = Project.create(
       user: user,
       name: Faker::App.name,
       description: Faker::Hipster.paragraph
     )
+    3.times do
+      skill = Skill.all.sample
+      ProjectSkill.create(project: project, skill: skill)
+    end
   end
 end
 
-Skill.create(name: 'ruby')
-Skill.create(name: 'python')
-Skill.create(name: 'javascript')
-Skill.create(name: 'rails')
-Skill.create(name: 'html')
-Skill.create(name: 'css')
+Skill.create(name: 'Ruby')
+Skill.create(name: 'Python')
+Skill.create(name: 'JavaScript')
+Skill.create(name: 'Rails')
+Skill.create(name: 'HTML')
+Skill.create(name: 'CSS')
 Skill.create(name: 'SQL')
 Skill.create(name: 'C#')
 Skill.create(name: 'PHP')
