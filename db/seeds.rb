@@ -11,6 +11,7 @@ require 'open-uri'
 
 User.destroy_all
 Match.destroy_all
+Project.destroy_all
 Skill.destroy_all
 
 luke = User.create(
@@ -57,13 +58,20 @@ end
 User.all.each do |user|
   luke = User.find_by(email: 'luke@luke.com')
   Match.create(user: user, liked_user: luke)
+  5.times do
+    Project.create(
+      user: user,
+      name: Faker::App.name,
+      description: Faker::Hipster.paragraph
+    )
+  end
 end
 
 Skill.create(name: 'ruby')
 Skill.create(name: 'python')
 Skill.create(name: 'javascript')
 Skill.create(name: 'rails')
-Skill.create(name:'html')
+Skill.create(name: 'html')
 Skill.create(name: 'css')
 Skill.create(name: 'SQL')
 Skill.create(name: 'C#')
