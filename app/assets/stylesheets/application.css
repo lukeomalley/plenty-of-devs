@@ -273,6 +273,7 @@ body {
   /* align-items: center; */
   padding: 0 20px;
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/debut_light.png");
+  /* background-image: url("https://en.wikipedia.org/wiki/Corduroy#/media/File:Mansestr.jpg"); */
 }
 
 .nav {
@@ -374,6 +375,16 @@ body {
   border-bottom: 1px solid grey;
 }
 
+.submit-button {
+  background-color: #4b7ca6;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 /* ========================================== */
 /* form styles */
 /* ========================================== */
@@ -417,11 +428,19 @@ body {
 .project-card-skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr) );
+  grid-gap: 10px;
 }
 
 .project-actions {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.star {
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 /* ========================================== */
@@ -432,7 +451,7 @@ body {
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr;
-  width: 60vw;
+  width: 50vw;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
   transition: 0.3s;
   background: #fff;
@@ -447,11 +466,33 @@ body {
 }
 
 .skill-card {
+  height: 20px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
   transition: 0.3s;
   background: #c4e9ff;
   border-radius: 10px
 }
+
+.collaborator-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+}
+
+.collaborator {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+
+.collaborator img {
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+
 
 .checkmark {
   color: green;
@@ -473,4 +514,8 @@ body {
 .chat-message {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.margin-top {
+  margin-top: 20px;
 }

@@ -6,32 +6,32 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "text-input" %>
   </div>
 
    <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
+    <%= f.text_field :username, autofocus: true, autocomplete: "username", :class => "text-input" %>
   </div>
 
    <div class="field">
     <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", :class => "text-input" %>
   </div>
 
    <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", :class => "text-input" %>
   </div>
 
    <div class="field">
     <%= f.label :city %><br />
-    <%= f.text_field :city, autofocus: true, autocomplete: "city" %>
+    <%= f.text_field :city, autofocus: true, autocomplete: "city", :class => "text-input" %>
   </div>
 
    <div class="field">
     <%= f.label :occupation %><br />
-    <%= f.text_field :occupation, autofocus: true, autocomplete: "occupation" %>
+    <%= f.text_field :occupation, autofocus: true, autocomplete: "occupation", :class => "text-input" %>
   </div>
 
   <div class="field">
@@ -39,16 +39,16 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", :class => "text-input" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => "text-input" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", :class => "submit-button"%>
   </div>
 <% end %>
 
