@@ -20,11 +20,7 @@
    text-decoration: none;
    color: black;
  }
-
- hr {
-  border: 1px solid black;
- }
-
+ 
 h1,
 h2,
 h3,
@@ -88,6 +84,11 @@ a:active, a:focus {
    transition: 0.3s;
    border-radius: 10px;
    background-color: #fff;
+   font-family: 'Montserrat', 'sans-serif';
+ }
+
+ .user-card h1 {
+   font-weight: bold;
  }
 
  .user-card img{
@@ -130,7 +131,7 @@ a:active, a:focus {
   background-color: #f1f1f1;
   border-radius: 5px;
   padding: 10px;
-  margin: 10px auto;
+  margin: 20px auto;
   max-width: 50vw;
 }
 
