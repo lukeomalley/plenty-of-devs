@@ -4,6 +4,13 @@
     <h2><%=user.first_name %></h2>
     <p><%=user.city %></p>
     <p><%=user.occupation %></p>
+    <% project = user.projects.find_by(is_featured: true) %>
+    <% if project %>
+      <i><p>Currently working on:</p></i> 
+      <%= fa_icon 'laptop' %>
+      <%= link_to project.name , project_path(project) %>
+    <% end %>
+    <p> <% %></p>
     <div class="buttons">
       <%= link_to (fa_icon 'check-circle 3x'), like_user_path(user), method: :post, class: 'checkmark' %>
       <%= link_to (fa_icon 'times-circle 3x'), dislike_user_path(user), method: :post, class: 'cross' %>
