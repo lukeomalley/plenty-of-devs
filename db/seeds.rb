@@ -59,17 +59,20 @@ User.all.each do |user|
   luke = User.find_by(email: 'luke@luke.com')
   Match.create(user: user, liked_user: luke)
   5.times do
-    project = Project.create(
+    Project.create(
       user: user,
       name: Faker::App.name,
       description: Faker::Hipster.paragraph
     )
-    3.times do
-      skill = Skill.all.sample
-      ProjectSkill.create(project: project, skill: skill)
-    end
   end
   user.projects.first.update(is_featured: true)
+end
+
+Project.all.each do |project|
+  3.times do
+    skill = Skill.all.sample
+    ProjectSkill.create(project: project, skill: skill)
+  end
 end
 
 Skill.create(name: 'Ruby')
