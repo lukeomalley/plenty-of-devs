@@ -68,12 +68,6 @@ User.all.each do |user|
   user.projects.first.update(is_featured: true)
 end
 
-Project.all.each do |project|
-  3.times do
-    skill = Skill.all.sample
-    ProjectSkill.create(project: project, skill: skill)
-  end
-end
 
 Skill.create(name: 'Ruby')
 Skill.create(name: 'Python')
@@ -93,3 +87,10 @@ Skill.create(name: 'R')
 Skill.create(name: 'VBA')
 Skill.create(name: 'Objective C')
 Skill.create(name: 'Clojure')
+
+Project.all.each do |project|
+  3.times do
+    skill = Skill.all.sample
+    ProjectSkill.create(project: project, skill: skill)
+  end
+end
