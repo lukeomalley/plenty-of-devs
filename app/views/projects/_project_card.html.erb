@@ -5,5 +5,13 @@
     <% project.skills.each do |skill| %>
       <p class="skill-card"><%= skill.name %></p>
     <% end %>
+    <% if project.is_featured %>
+      <p class="star"> <%= fa_icon 'star' %>Featured Project</p>
+    <% else %>
+      <%= link_to "Set as featured project", featured_project_path(project), method: :post %>
+    <% end %>
+    <%= link_to 'Delete this project', project_path(project), method: :delete, data: {confirm: 'Are you sure you would like to delete this project?'} %>
+
+    
   </div>
 </div>

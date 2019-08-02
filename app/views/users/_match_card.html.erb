@@ -3,4 +3,6 @@
   <h3><%=user.first_name %></h3>
   <p><%=user.city %></p>
   <%= link_to (fa_icon 'envelope 3x' ), new_chat_path(match), method: :post %>
+
+     <%= button_to "Unmatch", dislike_user_path(user), method: :post, class: 'btn btn-danger' %>
 </div>
