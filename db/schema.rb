@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2019_08_02_140605) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.boolean "is_featured"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 

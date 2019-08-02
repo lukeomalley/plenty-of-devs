@@ -4,4 +4,8 @@ class Project < ApplicationRecord
     has_many :skills, through: :project_skills
     has_many :collaborators
     accepts_nested_attributes_for :project_skills
+
+   
+
+
 end

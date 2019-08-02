@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :projects, only: [:new, :create, :show, :index]
+  resources :projects, only: [:new, :create, :show, :index, :destroy]
 
   get '/my-projects', to: 'projects#my_projects', as: 'my_projects'
   resources :skills, only: [:new, :create, :show]
@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   # adding a collaborator to a project
   post '/add-collaborator', to: 'projects#add_collaborator', as: 'add_collaborator'
+  # setting featured project
+  post '/featured-project/:project_id',  to: 'projects#set_featured_project', as: 'featured_project'
 
   resources :messages
 end

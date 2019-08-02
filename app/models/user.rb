@@ -51,7 +51,7 @@ class User < ApplicationRecord
     # This function returns all the matches where the user is involved
     # both matches that the user created and matches where this user was liked or denied
     (matches + Match.all.where(liked_user: self)).select do |match|
-      match.is_matched == true
+      match.is_matched == true && match.is_denied == false
     end
   end
 
@@ -65,5 +65,13 @@ class User < ApplicationRecord
   def find_match(user)
     Match.find_by(user: self, liked_user: user).nil? ? Match.find_by(user: user, liked_user: self) : Match.find_by(user: self, liked_user: user)
   end
+
+  def featured_project(featured_project)
+    selected_project = Project.find(featured_project)
+    self.projects.each do |project|
+        project.update(is_featured: false) 
+    end
+    selected_project.update(is_featured: true)
+end
   
 end

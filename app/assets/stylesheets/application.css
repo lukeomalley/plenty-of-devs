@@ -41,7 +41,11 @@ a:active, a:focus {
 
  .match-card {
    display: grid;
+<<<<<<< HEAD
    grid-template-columns: 1fr 1fr 1fr 1fr ;
+=======
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+>>>>>>> projects-controller
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
    transition: 0.3s;
    padding: 20px;
@@ -459,6 +463,7 @@ body {
   font-weight: 'bold';
 }
 
+<<<<<<< HEAD
 .footer {
   padding: 20px;
 }
@@ -467,3 +472,5 @@ body {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+=======
+>>>>>>> projects-controller
